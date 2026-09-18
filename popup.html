@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>Recall</title>
+<link rel="stylesheet" href="fonts.css" />
+<link rel="stylesheet" href="popup.css" />
+</head>
+<body>
+
+<div class="popup">
+  <div class="header">
+    <div class="wordmark-row">
+      <div class="wordmark">Recall</div>
+      <div class="count-badge" id="countBadge">— / 5,000 saved</div>
+    </div>
+    <div class="search-wrap">
+      <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+        <circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+      </svg>
+      <input class="search-input" id="searchInput" type="text" placeholder="Search everything you've saved…" />
+    </div>
+    <div class="filter-row" id="filterRow">
+      <div class="filter-chip active" data-platform="all"><span>All</span></div>
+      <div class="filter-chip" data-platform="claude"><span class="dot" style="background:#E8A186"></span><span>Claude</span></div>
+      <div class="filter-chip" data-platform="chatgpt"><span class="dot" style="background:#7FCDB3"></span><span>GPT</span></div>
+      <div class="filter-chip" data-platform="gemini"><span class="dot" style="background:#7FA8F0"></span><span>Gemini</span></div>
+      <div class="filter-chip" data-platform="perplexity"><span class="dot" style="background:#B097D9"></span><span>Plx</span></div>
+    </div>
+  </div>
+
+  <div class="list" id="list"></div>
+
+  <div class="detail" id="detail">
+    <div class="detail-header">
+      <button class="back-btn" id="backBtn">
+        <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M15 18l-6-6 6-6"/></svg>
+        Back
+      </button>
+      <div class="detail-top-row">
+        <div class="detail-blob" id="detailBlob"><span class="glyph" id="detailGlyph"></span></div>
+        <h2 class="detail-title" id="detailTitle"></h2>
+      </div>
+      <div class="detail-meta-row">
+        <span class="platform-pill" id="detailPlatform"></span>
+        <span class="stamp-date" id="detailDate"></span>
+      </div>
+    </div>
+    <div class="detail-body" id="detailBody">
+      <div class="detail-content" id="detailContent"></div>
+    </div>
+    <div class="detail-actions">
+      <button class="action-btn" id="copyBtn">Copy</button>
+      <button class="action-btn primary" id="insertBtn">Insert</button>
+      <button class="action-btn danger" id="deleteBtn">Delete</button>
+    </div>
+  </div>
+</div>
+
+<script src="popup.js"></script>
+</body>
+</html>
